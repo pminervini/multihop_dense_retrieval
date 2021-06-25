@@ -91,7 +91,7 @@ if __name__ == '__main__':
 
     logger.info("Building index...")
     d = 768
-    xb = np.load(args.indexpath, mmap_mode='r').astype('float32')
+    xb = np.load(args.indexpath, mmap_mode='r') # .astype('float32')
 
     if args.hnsw:
         if path.exists("data/hotpot_index/wiki_index_hnsw.index"):
