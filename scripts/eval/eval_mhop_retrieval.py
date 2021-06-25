@@ -120,9 +120,9 @@ if __name__ == '__main__':
     else:
         index = faiss.IndexFlatIP(d)
         index.add(xb)
-        if args.gpu:
-            res = faiss.StandardGpuResources()
-            index = faiss.index_cpu_to_gpu(res, 0, index)
+        #if args.gpu:
+        #    res = faiss.StandardGpuResources()
+        #    index = faiss.index_cpu_to_gpu(res, 0, index)
 
     if args.save_index:
         faiss.write_index(index, "data/hotpot_index/wiki_index_hnsw_roberta")
